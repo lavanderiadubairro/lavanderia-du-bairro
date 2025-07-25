@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lavanderia Du Bairro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      background-color: #007bff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .diferenciais {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .diferencial {
+      flex: 1 1 250px;
+      background-color: #e6f0ff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    .instagram-button {
+      display: inline-block;
+      background-color: #C13584;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    header, footer {
+      z-index: 1;
+    }
+
+    .info {
+      z-index: 1;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="canvas-bg"></canvas>
+
+  <header class="info">
+    <h1>Lavanderia Du Bairro</h1>
+    <p>Conforto, praticidade e economia para o seu dia a dia</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>A Lavanderia Du Bairro é uma lavanderia de autosserviço localizada na Av. Daniel de La Touche, no estacionamento da Selfit, Cohajap. Oferecemos máquinas modernas, ambiente confortável com poltronas, Wi-Fi, tomadas, cafeteira e muito mais!</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Diferenciais</h2>
+    <div class="diferenciais">
+      <div class="diferencial">
+        <h3>Lavagem Rápida</h3>
+        <p>Lavagem em apenas 35 minutos.</p>
+      </div>
+      <div class="diferencial">
+        <h3>Secagem Eficiente</h3>
+        <p>Secagem completa em 45 minutos.</p>
+      </div>
+      <div class="diferencial">
+        <h3>Espaço Confortável</h3>
+        <p>Poltronas, Wi-Fi, cafeteira e tomadas à disposição.</p>
+      </div>
+      <div class="diferencial">
+        <h3>Promoção Especial</h3>
+        <p>De terça a quinta, lavagem ou secagem por apenas R$12,90 com o cupom <strong>DUDU</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria de Fotos</h2>
+    <div class="galeria">
+      <img src="https://via.placeholder.com/400x250?text=Máquinas+Modernas" alt="Máquinas modernas">
+      <img src="https://via.placeholder.com/400x250?text=Espaço+Confortável" alt="Espaço confortável">
+      <img src="https://via.placeholder.com/400x250?text=Ambiente+Climatizado" alt="Ambiente climatizado">
+      <img src="https://via.placeholder.com/400x250?text=Área+de+Espera" alt="Área de espera">
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <p>📍 Av. Daniel de La Touche, estacionamento da academia Selfit, Cohajap – ao lado da Jacaré Home Center</p>
+
+    <a class="whatsapp-button" href="https://wa.me/5599999999999" target="_blank">Fale conosco no WhatsApp</a>
+    <a class="instagram-button" href="https://instagram.com/lavanderiadubairro" target="_blank">Nos siga no Instagram</a>
+
+    <div class="mapa" style="margin-top: 30px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12..."
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer class="info">
+    <p>&copy; 2025 Lavanderia Du Bairro. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('canvas-bg');
+    const ctx = canvas.getContext('2d');
+
+    let width = window.innerWidth;
+    let height = 300;
+    canvas.width = width;
+    canvas.height = height;
+
+    let bubbles = [];
+
+    function createBubble() {
+      return {
+        x: Math.random() * width,
+        y: height + 10,
+        radius: Math.random() * 8 + 2,
+        speed: Math.random() * 1 + 0.5,
+        opacity: Math.random() * 0.5 + 0.2
+      };
+    }
+
+    for (let i = 0; i < 50; i++) {
+      bubbles.push(createBubble());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let b of bubbles) {
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(173, 216, 230, ${b.opacity})`;
+        ctx.fill();
+        b.y -= b.speed;
+        if (b.y < -10) {
+          Object.assign(b, createBubble());
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      canvas.width = width;
+    });
+  </script>
+</body>
+</html>
